@@ -1,11 +1,20 @@
+using hotel_api.Data;
+using hotel_api.Endpoint;
+using hotel_api.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+builder.Services.AddScoped<IHotelRepository, HotelRepository>();
+builder.Services.AddDbContext<HotelContext>();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 
 var app = builder.Build();
 
@@ -14,6 +23,12 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow credentials
 }
 
 app.UseHttpsRedirection();
@@ -21,5 +36,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
+app.ConfigureCustomerApi();
+app.ConfigureRoomApi();
 app.Run();
