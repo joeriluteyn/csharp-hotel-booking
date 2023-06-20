@@ -1,0 +1,44 @@
+.bookingContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    position: relative;
+    
+}
+
+.searchBar {
+    height: 30px;
+    display: flex;
+    border: 3px solid rgb(220, 209, 50);
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1024px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.searchButton {
+    background-color: darkblue;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+}
+
+.searchItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.searchText {
+    cursor: pointer;
+    color: lightgray;
+}
+
+.date {
+    position: absolute;
+    top: 55px;
+}

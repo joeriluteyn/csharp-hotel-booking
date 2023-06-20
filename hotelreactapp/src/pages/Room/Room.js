@@ -1,8 +1,12 @@
 import React from 'react'
+import Navbar from '../../components/navbar/Navbar'
 
 function Room() {
   return (
-    <div>Room</div>
+    <div>
+      <Navbar/>
+      
+    </div>
   )
 }
 

@@ -18,6 +18,14 @@
     font-weight: 500;
 }
 
+.logo:link{
+    text-decoration: none;
+}
+
+.logo:visited{
+    text-decoration: none;
+    color: white;
+}
 .navButton {
     margin-left: 20px;
     padding: 5px 10px;
@@ -26,3 +34,4 @@
     color: darkblue;
     border-radius: 10px;
 }
+

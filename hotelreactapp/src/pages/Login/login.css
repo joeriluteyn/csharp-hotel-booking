@@ -1,0 +1,28 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.loginForm {
+    
+    border-radius: 5px;
+    margin: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    background-color: darkblue;
+    color: white;
+}
+
+.loginFormItem {
+    margin: 5px;
+}
+
+.loginButton {
+    cursor: pointer;
+    color: darkblue;
+    background-color: white;
+    border-radius: 15px;
+}

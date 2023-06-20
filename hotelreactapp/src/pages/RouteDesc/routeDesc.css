@@ -1,0 +1,13 @@
+.routeDescContainer {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.routeDescItemContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1024px;
+    justify-content: center;
+}
