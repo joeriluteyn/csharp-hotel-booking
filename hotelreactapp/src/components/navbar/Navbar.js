@@ -1,21 +1,18 @@
 import { useNavigate, useParams } from "react-router-dom"
 import "./navbar.css"
 
-function Navbar() {
+function Navbar(type) {
 const navigate = useNavigate()
 const params = useParams()
 if(params.userName !== undefined){
 return (
     <div className="navbar">
         <div className="navContainer">
-            <a href={"/" + params.userName} className="logo">Joeribooking</a>
+            <a href={"/" + params.userName} className="logo">BooleanHotel</a>
             <div className="navItems">
             
             <span>Welcome {params.userName}</span>
             <a href="/"><button  className="navButton">Logout</button></a>
-
-            
-
 
             </div>
         </div>
@@ -25,7 +22,7 @@ return (
   return (
     <div className="navbar">
         <div className="navContainer">
-        <a href="/" className="logo">Joeribooking</a>
+        <a href="/" className="logo">BooleanHotel</a>
             <div className="navItems">
             
             <a href="/register"><button className="navButton">Register</button></a>

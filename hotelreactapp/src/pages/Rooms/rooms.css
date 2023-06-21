@@ -1,6 +1,25 @@
 .rooms {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 1024px;   
+    gap: 10px;
+    margin-bottom: 50px;
+}
+
+ .roomItem{
+    
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    
+ }
+
+.roomImage {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+
+
 }

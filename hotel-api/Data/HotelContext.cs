@@ -19,5 +19,6 @@ namespace hotel_api.Data
 
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Room> Rooms { get; set; }
+        public DbSet<Booking> Bookings { get; set; }
     }
 }

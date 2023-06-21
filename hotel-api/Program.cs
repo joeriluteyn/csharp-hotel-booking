@@ -38,4 +38,5 @@ app.UseAuthorization();
 app.MapControllers();
 app.ConfigureCustomerApi();
 app.ConfigureRoomApi();
+app.ConfigureBookingApi();
 app.Run();

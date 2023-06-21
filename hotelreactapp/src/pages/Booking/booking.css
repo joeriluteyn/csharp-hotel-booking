@@ -42,3 +42,40 @@
     position: absolute;
     top: 55px;
 }
+
+.people {
+    position: absolute;
+    top: 55px;
+    background-color: white;
+    color: gray;
+    border-radius: 5px;
+    border: 2px solid gray;
+}
+
+.peopleItem {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.peopleCounter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: black;
+}
+
+.peopleConterButton {
+ width: 30px;
+ height: 30px;
+ border: 1px solid darkblue;
+ color: darkblue;
+ cursor: pointer;
+ background-color: white;
+ border-radius: 2px;
+}
+
+.peopleConterButton:disabled {
+    cursor: not-allowed;
+}

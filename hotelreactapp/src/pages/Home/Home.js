@@ -1,4 +1,5 @@
-import Header from "./Header"
+import Footer from "../../components/Footer/Footer"
+import Header from "../../components/Header/Header"
 import Navbar from "../../components/navbar/Navbar"
 import Main from "./Main"
 
@@ -8,6 +9,7 @@ function Home(){
         <Navbar />
         <Header />
         <Main />
+        <Footer />
        </div>
     )
 }

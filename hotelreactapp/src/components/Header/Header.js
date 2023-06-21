@@ -6,7 +6,6 @@ import { useNavigate, useParams } from "react-router-dom"
 function Header() {
   const params = useParams()
   const navigate = useNavigate()
-  console.log(params.userName);
   if(params.userName !== undefined){
     return(
     <div className="header">

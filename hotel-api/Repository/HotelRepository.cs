@@ -5,6 +5,16 @@ namespace hotel_api.Repository
 {
     public class HotelRepository : IHotelRepository
     {
+        public Booking AddBooking(Booking booking)
+        {
+            using ( var db = new HotelContext())
+            {
+                db.Bookings.Add(booking);
+                db.SaveChanges();
+                return booking;
+            }
+        }
+
         public Customer AddCustomer(Customer customer)
         {
             using ( var db = new HotelContext())
@@ -22,6 +32,17 @@ namespace hotel_api.Repository
                 db.Rooms.Add(room);
                 db.SaveChanges();
                 return room;
+            }
+        }
+
+        public Booking DeleteBooking(int id)
+        {
+            using (var db = new HotelContext())
+            {
+                var booking = db.Bookings.SingleOrDefault(x => x.Id == id);
+                db.Bookings.Remove(booking);
+                db.SaveChanges();
+                return booking;
             }
         }
 
@@ -47,6 +68,14 @@ namespace hotel_api.Repository
             }
         }
 
+        public IEnumerable<Booking> GetBookings()
+        {
+            using (var db = new HotelContext())
+            {
+                return db.Bookings.ToList();
+            }
+        }
+
         public IEnumerable<Customer> GetCustomers()
         {
             using (var db = new HotelContext())
@@ -60,6 +89,26 @@ namespace hotel_api.Repository
             using (var db= new HotelContext())
             {
                 return db.Rooms.ToList();
+            }
+        }
+
+        public Booking UpdateBooking(Booking booking)
+        {
+            using (var db = new HotelContext())
+            {
+                var targetBooking = db.Bookings.FirstOrDefault(i => i.Id == booking.Id);
+                if (targetBooking != null)
+                {
+                    targetBooking.StartDate = booking.StartDate;
+                    targetBooking.EndDate = booking.EndDate;
+                    targetBooking.AmountOfPeople = booking.AmountOfPeople == 0 ? targetBooking.AmountOfPeople : booking.AmountOfPeople;
+                    targetBooking.CustomerId = booking.CustomerId == 0 ? targetBooking.CustomerId : booking.CustomerId;
+                    targetBooking.RoomId = booking.RoomId == 0 ? targetBooking.RoomId : booking.RoomId;
+
+                }
+                db.Bookings.Update(targetBooking);
+                db.SaveChanges();
+                return targetBooking;
             }
         }
 

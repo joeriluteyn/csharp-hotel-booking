@@ -13,5 +13,11 @@ namespace hotel_api.Repository
         Room AddRoom(Room room);
         Room UpdateRoom(Room room);
         Room DeleteRoom(int id);   
+
+        IEnumerable<Booking> GetBookings();
+        Booking AddBooking(Booking booking);
+        Booking UpdateBooking(Booking booking);
+        Booking DeleteBooking(int id);
+
     }
 }
