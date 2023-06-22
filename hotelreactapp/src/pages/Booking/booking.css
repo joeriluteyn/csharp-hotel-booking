@@ -79,3 +79,30 @@
 .peopleConterButton:disabled {
     cursor: not-allowed;
 }
+
+.resultsContainer {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    
+}
+
+.results {
+  
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+  
+  width: 100%;
+  max-width: 1024px; 
+}
+
+.bookingButton {
+    background-color: darkblue;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0px;
+    cursor: pointer;
+}
+

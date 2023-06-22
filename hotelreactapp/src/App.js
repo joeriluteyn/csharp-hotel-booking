@@ -7,8 +7,9 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import RouteDesc from './pages/RouteDesc/RouteDesc';
 import Location from './pages/Location/Location';
-import { useState } from 'react';
+
 import Booking from './pages/Booking/Booking';
+import Account from './pages/Account/Account';
 
 
 function App() {
@@ -38,6 +39,9 @@ function App() {
 
         <Route path='/booking' element={<Booking />}/>
         <Route path=':userName/booking' element={<Booking />}/>
+
+        
+        <Route path=':userName/account' element={<Account />}/>
 
 
 

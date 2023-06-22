@@ -12,7 +12,9 @@ return (
             <div className="navItems">
             
             <span>Welcome {params.userName}</span>
+            
             <a href="/"><button  className="navButton">Logout</button></a>
+            <a href={"/"+params.userName +"/account"}>                            My account</a>
 
             </div>
         </div>

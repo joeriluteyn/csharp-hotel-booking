@@ -103,7 +103,7 @@ namespace hotel_api.Repository
                     targetBooking.EndDate = booking.EndDate;
                     targetBooking.AmountOfPeople = booking.AmountOfPeople == 0 ? targetBooking.AmountOfPeople : booking.AmountOfPeople;
                     targetBooking.CustomerId = booking.CustomerId == 0 ? targetBooking.CustomerId : booking.CustomerId;
-                    targetBooking.RoomId = booking.RoomId == 0 ? targetBooking.RoomId : booking.RoomId;
+                    targetBooking.Room = booking.Room == 0 ? targetBooking.Room : booking.Room;
 
                 }
                 db.Bookings.Update(targetBooking);

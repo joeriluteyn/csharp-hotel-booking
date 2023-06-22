@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace hotel_api.Model
 {
@@ -9,11 +10,15 @@ namespace hotel_api.Model
         public string StartDate { get; set; }
         [DefaultValue("")]
         public string EndDate { get; set; }
-        
-        public int RoomId { get; set; }
-        public int CustomerId { get; set; }
         public int AmountOfPeople { get; set; }
 
+
+        
+        public int Room { get; set; }
+        [ForeignKey("Customer")]
+        public int CustomerId { get; set; }
+
+       
 
     }
 }
