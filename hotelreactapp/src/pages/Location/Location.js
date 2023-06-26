@@ -2,12 +2,16 @@ import "./location.css"
 import Navbar from '../../components/navbar/Navbar'
 import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faBellConcierge } from "@fortawesome/free-solid-svg-icons"
 
 function Location() {
   return (
     <div>
         <Navbar/>
         <Header />
+        
+        
     <div className="locationContainer">
         
         <div className="locationItemContainer">

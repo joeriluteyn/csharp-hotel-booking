@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header"
 import Navbar from "../../components/navbar/Navbar"
 import Main from "./Main"
 
+
 function Home(){
     return (
        <div>
